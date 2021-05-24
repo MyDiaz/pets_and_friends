@@ -1,0 +1,21 @@
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+h4{
+    text-align: center;
+    font-weight: 600;
+}
+
+mat-card-actions{
+    text-align: center;
+}
+
+.btn-adopt{
+    background-color: #e0bfff;
+}
+

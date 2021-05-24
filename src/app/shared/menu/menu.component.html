@@ -1,0 +1,23 @@
+<button type="button" mat-button (click)="drawer.toggle()">
+  Toggle sidenav
+</button>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer  mode="side">
+      <div class="menu-sidenav">
+        <button mat-raised-button>
+        Toggle extra text
+      </button>
+
+      <button mat-raised-button>
+        Toggle extra text
+      </button>
+
+      <button mat-raised-button>
+        Toggle extra text
+      </button>
+      </div>
+      
+    </mat-drawer>
+    
+    
+  </mat-drawer-container>

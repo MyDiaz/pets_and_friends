@@ -1,0 +1,44 @@
+<div class="aligner">
+    <mat-card class="aligner-center-item">
+      <mat-card-title class="title">
+        Formulario de interes de adopción
+      </mat-card-title>
+      <mat-card-content>
+        <form id="login-form" #lForm="ngForm" [formGroup]="adoptForm" (ngSubmit)="saveAnswers()" novalidate>
+          <mat-form-field style="width: 100%; margin-bottom: 10px;">
+            <label for=""> Cúal es tu ocupación? </label>
+            <textarea matInput formControlName="ocupacion">
+            </textarea>
+            <!-- <mat-hint style="color: red;" *ngIf="submitted && error?.code == 1 && !loginForm.controls.username.hasError('required')">{{error.message}}</mat-hint>
+            <mat-hint style="color: red;" *ngIf="submitted && loginForm.controls.username.hasError('required')">Field is mandatory</mat-hint> -->
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+            <label for=""> Por qué quieres adoptame?</label>
+            <textarea class="answer" matInput formControlName="porque">
+            </textarea>
+            <!-- <mat-hint style="color: red;" *ngIf="submitted && error?.code == 2 && !loginForm.controls.password.hasError('required')">{{error.message}}</mat-hint>
+            <mat-hint style="color: red;" *ngIf="submitted && loginForm.controls.password.hasError('required')">Field is mandatory</mat-hint> -->
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+            <label for=""> Cuál es tu rango salarial?</label>
+            <textarea matInput formControlName="salario">
+            </textarea>
+            <!-- <mat-hint style="color: red;" *ngIf="submitted && error?.code == 2 && !loginForm.controls.password.hasError('required')">{{error.message}}</mat-hint>
+            <mat-hint style="color: red;" *ngIf="submitted && loginForm.controls.password.hasError('required')">Field is mandatory</mat-hint> -->
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+            <label for=""> Qué que es importante para tener una mascota?</label>
+            <textarea matInput formControlName="importancia">
+            </textarea>
+
+            <!-- <mat-hint style="color: red;" *ngIf="submitted && error?.code == 2 && !loginForm.controls.password.hasError('required')">{{error.message}}</mat-hint>
+            <mat-hint style="color: red;" *ngIf="submitted && loginForm.controls.password.hasError('required')">Field is mandatory</mat-hint> -->
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions style="text-align: right;">
+        <button mat-raised-button type="submit" form="login-form"> Send </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

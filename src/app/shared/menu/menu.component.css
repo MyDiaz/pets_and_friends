@@ -1,0 +1,19 @@
+button{
+  margin-top: 3px;
+}
+
+.example-container {
+    height: 100%;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    /*align-items: center; Vertical*/
+    justify-content: center; /*hoizontal*/
+  }
+  .menu-sidenav {
+    padding: 20px;
+    display: table-caption;
+  }
