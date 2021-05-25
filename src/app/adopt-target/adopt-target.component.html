@@ -1,10 +1,10 @@
 
-  <div class="content">
+  <div class="content"  *ngFor="let animal of animals">
     <mat-card class="mat-elevation-z4">
-      <h4> I'm Bruno </h4>
+      <h4> {{ animal.name | UpperCasePipe }} </h4>
       <img mat-card-image src="https://phantom-expansion.unidadeditorial.es/04d5a7930d32e4860ba7cf82291b9d30/resize/640/assets/multimedia/imagenes/2021/03/18/16160714974849.jpg">
       <mat-card-content>
-        <!--{{ nombre animal | UpperCasePipe }}-->
+        <!---->
         
       </mat-card-content>
       <mat-card-actions class="mat-card-actions">
