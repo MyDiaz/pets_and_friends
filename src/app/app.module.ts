@@ -24,6 +24,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormAdoptComponent } from './form-adopt/form-adopt.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { FormAdoptComponent } from './form-adopt/form-adopt.component';
     HttpClientModule,
     MatSidenavModule,
     MatMenuModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
     Routing,
     BrowserAnimationsModule,
     CoreModule,

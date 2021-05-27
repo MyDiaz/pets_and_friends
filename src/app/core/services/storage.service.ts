@@ -3,6 +3,8 @@ import {Injectable} from "@angular/core";
 import { Router } from '@angular/router';
 import {Session} from "../models/session.model";
 import {User} from "../models/user.model";
+import { HttpClient, HttpHeaders, HttpHandler } from '@angular/common/http';
+
 
 @Injectable()
 export class StorageService {
@@ -10,7 +12,7 @@ export class StorageService {
   private localStorageService;
   private currentSession : Session = null;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private http: HttpClient) {
     this.localStorageService = localStorage;
     this.currentSession = this.loadSessionData();
   }
@@ -52,5 +54,9 @@ export class StorageService {
     this.removeCurrentSession();
     this.router.navigate(['/login']);
   }
+  
+  
+
+  
 
 }

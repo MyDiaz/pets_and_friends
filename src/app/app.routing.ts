@@ -9,8 +9,8 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [ AuthorizatedGuard ] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'form-adopt', component: FormAdoptComponent},
-  { path: 'form-adopt/:id', component: FormAdoptComponent},
+  { path: 'form-adopt', component: FormAdoptComponent, canActivate: [ AuthorizatedGuard ]},
+  { path: 'form-adopt/:id', component: FormAdoptComponent, canActivate: [ AuthorizatedGuard ]},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home'}
 ];

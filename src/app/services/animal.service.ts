@@ -19,6 +19,8 @@ export class AnimalService {
   getAnimals() {
     return this.http.get<IAnimal>(this.url);
 }
+
+
 // [
 //   {id: 4, name: "Morocha", age: 5, breed: "Criollo", isAdopted: true},
 //   {id: 3, name: "Katha", age: 12, breed: "Criollo", isAdopted: true},

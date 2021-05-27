@@ -5,6 +5,10 @@
   <button mat-button>Contact</button>
   <button mat-button>About Us</button>
 
-  <button class="log-out-btn" mat-button type="button" (click)="logout()">Log Out</button>
+  <button class="log-out-btn" mat-button type="button" [matMenuTriggerFor]="menu">More actions </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>  {{user.name}} {{user.surname}}  </button>
+    <button mat-menu-item (click)="logout()"> Log Out </button>
+  </mat-menu>
 </div>
 

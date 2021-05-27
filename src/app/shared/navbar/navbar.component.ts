@@ -9,9 +9,12 @@ import {StorageService} from "../../core/services/storage.service";
 })
 export class NavbarComponent implements OnInit {
 
+  user:any;
+
   constructor(private authenticationService: AuthenticationService, private storageService: StorageService) { }
 
   ngOnInit(): void {
+    this.getUser();
   }
 
   
@@ -19,5 +22,10 @@ export class NavbarComponent implements OnInit {
     this.authenticationService.logout().subscribe(
         response => {if(response) {this.storageService.logout();}}
     );
+  }
+
+  public getUser(){
+    this.user = this.storageService.getCurrentUser()
+    console.log(this.user)
   }
 }
