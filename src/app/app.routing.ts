@@ -10,6 +10,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'form-adopt', component: FormAdoptComponent},
+  { path: 'form-adopt/:id', component: FormAdoptComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home'}
 ];

@@ -1,4 +1,8 @@
-
+span{
+    background-color: orangered;
+    width: 100%;
+    text-align: center;
+}
 
 .menu{
     width: 100px;

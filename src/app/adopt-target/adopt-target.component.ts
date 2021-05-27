@@ -13,23 +13,26 @@ export class AdoptTargetComponent implements OnInit {
   animals:any = [];
 
   constructor(private router: Router, private _animalService: AnimalService) {
-    this.getAnimals();
+    this._animalService.getAnimals().subscribe( data => {
+      console.log("ANIMALSSSSSSSSSSSS", data)
+      this.animals = data;
+    }, error => {
+      console.log(error)
+    })
    }
 
   ngOnInit(): void {
+    
   }
 
   fillForm(){
     this.router.navigate(['/form-adopt'])
   }
 
-  getAnimals(){
-    this._animalService.getAnimals().subscribe( data => {
-      this.animals = data;
-    }, error => {
-      console.log(error)
-    })
-    }
+  wacthAnimal( id:number ){
+    this.router.navigate(['/form-adopt',id]);
+  }
+
   }
 
 

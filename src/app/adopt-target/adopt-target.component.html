@@ -1,14 +1,17 @@
-
-  <div class="content"  *ngFor="let animal of animals">
-    <mat-card class="mat-elevation-z4">
-      <h4> {{ animal.name | UpperCasePipe }} </h4>
-      <img mat-card-image src="https://phantom-expansion.unidadeditorial.es/04d5a7930d32e4860ba7cf82291b9d30/resize/640/assets/multimedia/imagenes/2021/03/18/16160714974849.jpg">
-      <mat-card-content>
-        <!---->
-        
-      </mat-card-content>
-      <mat-card-actions class="mat-card-actions">
-        <button mat-button class="btn-adopt" (click)="fillForm()"> May you adopt me please? </button>
-      </mat-card-actions>
-    </mat-card>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let animal of animals.data">
+      <mat-card class="mat-elevation-z4">
+        <h4> {{ animal.name }} </h4>
+        <img mat-card-image src="../../assets/Pets/{{animal.image}}">
+        <mat-card-content>
+          <!---->
+          
+        </mat-card-content>
+        <mat-card-actions class="mat-card-actions">
+          <button mat-button class="btn-adopt" (click)="wacthAnimal(animal.id)"> May you adopt me please? </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Validators, FormGroup, FormBuilder} from "@angular/forms";
+import { AnimalService } from '../services/animal.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-form-adopt',
@@ -8,9 +10,25 @@ import {Validators, FormGroup, FormBuilder} from "@angular/forms";
 })
 export class FormAdoptComponent implements OnInit {
 
+  animals:any = [];
   adoptForm: FormGroup;
+  idAnimal:string;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private _animalService: AnimalService, 
+    private activatedRoute:ActivatedRoute) {
+
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.idAnimal = params.get('id');
+    });
+
+    this._animalService.getAnimals().subscribe( data => {
+      
+      this.animals = data;
+      console.log("ANIMALSSSSSSSSSSSS", this.animals.data)
+    }, error => {
+      console.log(error)
+    })
+   }
 
   ngOnInit(): void {
       this.adoptForm = this.formBuilder.group({
